@@ -1,8 +1,8 @@
 # Kratum
 
-**Kratum** is a [Stratum pool server](https://braiins.com/stratum-v1/docs) that’s based on
-[NOMP (Node Open Mining Portal)](https://github.com/zone117x/node-open-mining-portal) and extended
-to support the [Kadena blockchain](https://github.com/kadena-io).
+**Kratum** is a [Stratum pool server](https://braiins.com/stratum-v1/docs) that supports the
+[Kadena blockchain](https://github.com/kadena-io), based on the
+[popular NOMP (Node Open Mining Portal)](https://github.com/zone117x/node-open-mining-portal).
 
 ## Development
 
@@ -16,8 +16,8 @@ _TODO_
 ## Testing
 
 [NoncerPro](https://github.com/NoncerPro/Kadena/releases/tag/2.2.0) seems to be the only non-ASIC
-Kadena miner that remains functional. That miner can be used to test Kratum with the
-[provided batch template](testing/noncerpro.bat).
+Kadena miner that’s publicly available and still functional. That miner can be used to test Kratum
+with the [provided batch template](testing/noncerpro.bat).
 
 ## License
 
