@@ -1,0 +1,6 @@
+{
+        "name": "Kadena",
+      "symbol": "KDA",
+   "algorithm": "blake2s",
+  "chainCount": 20
+}
