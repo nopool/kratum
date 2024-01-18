@@ -6,10 +6,11 @@
 
 ## Background
 
-Kadena features a unique parallel-chain architecture that’s capable of massive throughput but is
-incompatible with the standard Stratum mining protocol. The Kratum server extends NOMP, which uses
-[Node Stratum Pool](https://github.com/zone117x/node-stratum-pool) in turn, as the basis for making
-the required changes.
+Kadena’s unique parallel-chain architecture makes massive throughput possible but requires
+[extensions to the standard Stratum mining protocol](https://gist.github.com/mightybyte/f1567c2bec0380539c638225fb8c1cf4).
+[Massive](https://github.com/joinmassive) has used NOMP, which uses
+[Node Stratum Pool](https://github.com/zone117x/node-stratum-pool) in turn, as the foundation to add
+these extensions to.
 
 ## Development
 
