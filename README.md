@@ -16,7 +16,7 @@ these extensions to.
 
 _TODO_
 
-## Development
+## Deployment and development
 
 Kratum is developed using Node.js 12.x (due to Ubuntu LTS availability) and requires a
 [working Kadena Chainweb node](https://github.com/nopool/chainweb-node), the configuration of which
