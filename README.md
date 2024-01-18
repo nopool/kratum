@@ -6,10 +6,10 @@
 
 ## Background
 
-Kadena has a unique parallel-chain architecture that enables massive throughput but is incompatible
-with the standardized Stratum protocol. The Kratum service extends NOMP, which in turn uses
-[Node Stratum Pool](https://github.com/zone117x/node-stratum-pool), as the basis of the requisite
-changes.
+Kadena features a unique parallel-chain architecture that’s capable of massive throughput but is
+incompatible with the standard Stratum mining protocol. The Kratum server extends NOMP, which uses
+[Node Stratum Pool](https://github.com/zone117x/node-stratum-pool) in turn, as the basis for making
+the required changes.
 
 ## Development
 
