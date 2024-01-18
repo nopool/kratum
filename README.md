@@ -4,6 +4,13 @@
 [Kadena blockchain](https://github.com/kadena-io), based on the
 [popular NOMP (Node Open Mining Portal)](https://github.com/zone117x/node-open-mining-portal).
 
+## Background
+
+Kadena has a unique parallel-chain architecture that enables massive throughput but is incompatible
+with the standardized Stratum protocol. The Kratum service extends NOMP, which in turn uses
+[Node Stratum Pool](https://github.com/zone117x/node-stratum-pool), as the basis of the requisite
+changes.
+
 ## Development
 
 Kratum is developed using Node.js 12.x (due to Ubuntu LTS availability) and requires a
