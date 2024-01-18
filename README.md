@@ -12,6 +12,10 @@ Kadena’s unique parallel-chain architecture makes massive throughput possible 
 [Node Stratum Pool](https://github.com/zone117x/node-stratum-pool) in turn, as the foundation to add
 these extensions to.
 
+## Design
+
+_TODO_
+
 ## Development
 
 Kratum is developed using Node.js 12.x (due to Ubuntu LTS availability) and requires a
