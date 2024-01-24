@@ -31,7 +31,7 @@ contributors may want to implement either feature or both.
 The Kratum server was effectively submitting Kadena blocks through April 2023. However, lack of
 access to competitive mining hardware (such as Bitmain’s Antminer KA3) has likely since allowed
 breaking changes to be introduced. Open-sourcing this software is intended to let developers with
-adequate hardware reproduce and resolve any issues.
+adequate hardware help reproduce and resolve any newer issues.
 
 ## Deployment and development
 
