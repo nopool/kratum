@@ -26,6 +26,13 @@ has been dropped in the process and
 [Supabase self-hosting](https://supabase.com/docs/guides/self-hosting) opted against, so future
 contributors may want to implement either feature or both.
 
+## Other caveats
+
+The Kratum server was effectively submitting blocks as of April 2023. Lack of access to capable
+mining hardware (namely, a Bitmain Antminer KA3), though, likely permitted breaking changes to be
+introduced thereafter. Open-sourcing this software is intended to let developers with adequate
+hardware reproduce and resolve possible issues.
+
 ## Deployment and development
 
 Kratum is developed using Node.js 12.x (due to Ubuntu LTS availability) and requires a
