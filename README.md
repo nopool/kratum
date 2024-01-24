@@ -26,12 +26,12 @@ has been dropped in the process and
 [Supabase self-hosting](https://supabase.com/docs/guides/self-hosting) opted against, so future
 contributors may want to implement either feature or both.
 
-## Other caveats
+## Caveats
 
-The Kratum server was effectively submitting blocks as of April 2023. Lack of access to capable
-mining hardware (namely, a Bitmain Antminer KA3), though, likely permitted breaking changes to be
-introduced thereafter. Open-sourcing this software is intended to let developers with adequate
-hardware reproduce and resolve possible issues.
+The Kratum server was effectively submitting Kadena blocks through April 2023. However, lack of
+access to competitive mining hardware (such as Bitmain’s Antminer KA3) has likely since allowed
+breaking changes to be introduced. Open-sourcing this software is intended to let developers with
+adequate hardware reproduce and resolve any issues.
 
 ## Deployment and development
 
