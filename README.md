@@ -9,22 +9,22 @@
 Kadena’s unique parallel-chain architecture makes massive throughput possible but requires
 [extensions to the standard Stratum mining protocol](https://gist.github.com/mightybyte/f1567c2bec0380539c638225fb8c1cf4).
 [Massive](https://github.com/joinmassive) has used NOMP, which uses
-[Node Stratum Pool](https://github.com/zone117x/node-stratum-pool) in turn, as the foundation to
-develop these extensions on.
+[Node Stratum Pool](https://github.com/zone117x/node-stratum-pool) in turn, as the foundation to add
+these extensions to.
 
 ## Design
 
 The structure of the source NOMP and Node Stratum Pool projects has been mostly preserved (except
-for updates to their syntax and style) so bugfixes can be downstreamed from them, albeit this
-decision has other development costs. In particular, the projects’ event-driven control flow
-requires navigating the resulting spaghetti code.
+for updates to their syntax and style) so bugfixes can be downstreamed from them, but this decision
+bears some maintenance cost too. In particular, the projects’ event-driven control flow can read
+like spaghetti code.
 
-A notable departure from the projects’ structure is the migration of the MySQL database to the
+A notable structural departure is the migration of NOMP’s MySQL database to the
 [Supabase platform](https://github.com/supabase) for compatibility with
-[Massive’s interface](https://nopool.com/). Although this change drops
-[MPOS compatibility](https://github.com/MPOS/php-mpos) and eschews
-[Supabase’s self-hosting option](https://supabase.com/docs/guides/self-hosting), future developers
-might want to take on both features.
+[Massive’s interface](https://nopool.com/). [MPOS compatibility](https://github.com/MPOS/php-mpos)
+has been dropped in the process and
+[Supabase self-hosting](https://supabase.com/docs/guides/self-hosting) opted against, so future
+contributors may want to implement either feature or both.
 
 ## Deployment and development
 
