@@ -9,22 +9,22 @@
 Kadena’s unique parallel-chain architecture makes massive throughput possible but requires
 [extensions to the standard Stratum mining protocol](https://gist.github.com/mightybyte/f1567c2bec0380539c638225fb8c1cf4).
 [Massive](https://github.com/joinmassive) has used NOMP, which uses
-[Node Stratum Pool](https://github.com/zone117x/node-stratum-pool) in turn, as the foundation to add
-these extensions to.
+[Node Stratum Pool](https://github.com/zone117x/node-stratum-pool) in turn, as the foundation to
+develop these extensions on.
 
 ## Design
 
-Besides syntax and style updates, the NOMP and Node Stratum Pool projects’ structure has been mostly
-preserved to enable downstreaming of bugfixes. There are also development and maintenance
-disadvantages of this design decision, though. In particular, event-driven control flow is arguably
-overused by the projects to the point of producing spaghetti code.
+The structure of the source NOMP and Node Stratum Pool projects has been mostly preserved (except
+for updates to their syntax and style) so bugfixes can be downstreamed from them, albeit this
+decision has other development costs. In particular, the projects’ event-driven control flow
+requires navigating the resulting spaghetti code.
 
-A notable departure from the project structure is the replacement of the MySQL database with
-the [Supabase platform](https://supabase.com/) to simplify integration with
-[Massive’s UI](https://nopool.com/). This change sacrifices
-[MPOS compatibility](https://github.com/MPOS/php-mpos) and doesn’t adopt
-[Supabase’s self-hosted option](https://supabase.com/docs/guides/self-hosting), but both features
-are candidates for future development.
+A notable departure from the projects’ structure is the migration of the MySQL database to the
+[Supabase platform](https://github.com/supabase) for compatibility with
+[Massive’s interface](https://nopool.com/). Although this change drops
+[MPOS compatibility](https://github.com/MPOS/php-mpos) and eschews
+[Supabase’s self-hosting option](https://supabase.com/docs/guides/self-hosting), future developers
+might want to take on both features.
 
 ## Deployment and development
 
