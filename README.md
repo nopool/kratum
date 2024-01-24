@@ -14,7 +14,17 @@ these extensions to.
 
 ## Design
 
-_TODO_
+Besides syntax and style updates, the NOMP and Node Stratum Pool projects’ structure has been mostly
+preserved to enable downstreaming of bugfixes. There are also development and maintenance
+disadvantages of this design decision, though. In particular, event-driven control flow is arguably
+overused by the projects to the point of producing spaghetti code.
+
+A notable departure from the project structure is the replacement of the MySQL database with
+the [Supabase platform](https://supabase.com/) to simplify integration with
+[Massive’s UI](https://nopool.com/). This change sacrifices
+[MPOS compatibility](https://github.com/MPOS/php-mpos) and doesn’t adopt
+[Supabase’s self-hosted option](https://supabase.com/docs/guides/self-hosting), but both features
+are candidates for future development.
 
 ## Deployment and development
 
