@@ -24,14 +24,14 @@ A notable structural departure is the migration of NOMP’s MySQL database to th
 [Massive’s interface](https://nopool.com/). [MPOS compatibility](https://github.com/MPOS/php-mpos)
 has been dropped in the process and
 [Supabase self-hosting](https://supabase.com/docs/guides/self-hosting) opted against, so future
-contributors may want to implement either feature or both.
+contributors might consider implementing either feature or both.
 
 ## Caveats
 
 The Kratum server was effectively submitting Kadena blocks through April 2023. However, lack of
-access to competitive mining hardware (such as Bitmain’s Antminer KA3) has likely since allowed
-breaking changes to be introduced. Open-sourcing this software is intended to let developers with
-adequate hardware help reproduce and resolve any newer issues.
+access to competitive mining hardware (such as Bitmain’s Antminer KA3) has likely allowed breaking
+changes to be introduced since. Open-sourcing this software is intended to let developers with
+adequate hardware help reproduce and resolve any new issues.
 
 ## Deployment and development
 
