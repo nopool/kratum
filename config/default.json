@@ -1,4 +1,5 @@
 {
+      "nodeId": "[Insert node identifier here]",
      "logging": {
                            "level": "info",
                   "shouldColorize": true
@@ -36,13 +37,19 @@
                         "name": "Kadena",
                       "symbol": "KDA",
                         "algo": "blake2s",
+                          "id": 2423,
                   "chainCount": 20,
                    "isEnabled": true,
                      "daemons": [{
-                                      "host": "::",
-                                      "user": "",
-                                  "password": "",
-                                      "port": 1848
+                                          "host": "::",
+                                          "user": "",
+                                      "password": "",
+                                       "cutPath": "/chainweb/0.0/mainnet01/cut",
+                                      "workPath": "/chainweb/0.0/mainnet01/mining/work",
+                                  "solutionPath": "/chainweb/0.0/mainnet01/mining/solved",
+                                    "updatePath": "/chainweb/0.0/mainnet01/mining/updates",
+                                       "address": "[Insert wallet address here]",
+                                          "port": 1848
                                 }],
                        "ports": {
                                   "1917": {
