@@ -1,7 +1,7 @@
 {
        "coin": "kadena.json",
     "daemons": [{
-                     "host": "localhost",
+                     "host": "::",
                      "port": 1848,
                      "user": "",
                  "password": ""
