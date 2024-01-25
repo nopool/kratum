@@ -68,7 +68,7 @@ LTS, follow the steps below.
 
 5. Edit the [server config file](config/default.json) by replacing `[Insert node identifier here]`
    with a unique ID to log for each of your server instances and `[Insert wallet address here]` with
-   the Kadena key that you want to collect block rewards at.
+   the Kadena key that you want to assign block rewards to.
 
 6. _TODO: Document Supabase config._
 
