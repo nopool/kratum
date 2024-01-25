@@ -68,15 +68,14 @@ LTS, follow the steps below.
 
 5. Edit the [server config file](config/default.json) by replacing `[Insert node identifier here]`
    with a unique ID to log for each of your server instances and `[Insert wallet address here]` with
-   the Kadena key that you want to assign block rewards to.
+   the Kadena key that you want to collect block rewards at.
 
 6. _TODO: Document Supabase config._
 
 7. Anytime after your Chainweb node has synced with the rest of the network (which you can check by
    matching the block height of your node at
    [https://[domain]:1789/chainweb/0.0/mainnet01/cut](https://[domain]:1789/chainweb/0.0/mainnet01/cut)
-   against that of the [Kadena block explorer](https://explorer.chainweb.com/mainnet)), run the
-   server:
+   with that of the [Kadena block explorer](https://explorer.chainweb.com/mainnet)), run the server:
 
    ```shell
    $ npm start
@@ -85,8 +84,8 @@ LTS, follow the steps below.
 ## Testing
 
 [NoncerPro](https://github.com/NoncerPro/Kadena/releases/tag/2.2.0) seems to be the only non-ASIC
-Kadena miner that’s publicly available and still functional. That miner can be used to test Kratum
-with the [provided batch template](testing/noncerpro.bat).
+Kadena mining software that’s publicly available and still functional. That miner can be used to
+test Kratum with the [provided batch template](testing/noncerpro.bat).
 
 ## License
 
