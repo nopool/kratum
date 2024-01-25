@@ -1,0 +1,60 @@
+{
+     "logging": {
+                           "level": "info",
+                  "shouldColorize": true
+                },
+  "clustering": {
+                  "forkCount": "auto",
+                  "isEnabled": false
+                },
+         "cli": {
+                  "port": 0
+                },
+       "redis": {
+                  "host": "::",
+                  "port": 6379
+                },
+        "pool": {
+                        "cutPollingInterval": 100,
+                       "workPollingInterval": 25,
+                     "metricsSampleInterval": 60,
+                     "jobRebroadcastTimeout": 30,
+                         "submissionTimeout": 60,
+                         "connectionTimeout": 600,
+                         "transmissionDelay": 100,
+                         "isProxyingEnabled": false,
+                  "shouldValidateWorkerName": true,
+                                   "banning": {
+                                                "invalidPercentage": 90,
+                                                   "shareThreshold": 100,
+                                                   "penaltyTimeout": 600,
+                                                    "purgeInterval": 300,
+                                                        "isEnabled": true
+                                              }
+                },
+      "kadena": {
+                        "name": "Kadena",
+                      "symbol": "KDA",
+                        "algo": "blake2s",
+                  "chainCount": 20,
+                   "isEnabled": true,
+                     "daemons": [{
+                                      "host": "::",
+                                      "user": "",
+                                  "password": "",
+                                      "port": 1848
+                                }],
+                       "ports": {
+                                  "1917": {
+                                            "difficulty": 100000000000000,
+                                               "vardiff": {
+                                                                 "minDifficulty": 10000000000,
+                                                                 "maxDifficulty": 1000000000000000000,
+                                                                    "targetTime": 5,
+                                                                  "retargetTime": 30,
+                                                            "variancePercentage": 30
+                                                          }
+                                          }
+                                }
+                }
+}
