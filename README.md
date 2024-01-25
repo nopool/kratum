@@ -40,7 +40,47 @@ Kratum is developed using Node.js 12.x (due to Ubuntu LTS availability) and requ
 is described in that repository. To import the other dependencies and run the server on Ubuntu 22.04
 LTS, follow the steps below.
 
-_TODO_
+1. Import the system dependencies:
+
+   ```shell
+   $ sudo apt update
+   $ sudo apt upgrade -y
+   $ sudo apt install -y redis-server \
+                         nodejs       \
+                         npm
+   ```
+
+2. Go to your working directory of choice.
+3. Copy this repo to your directory:
+
+   ```shell
+   $ git clone https://github.com/nopool/kratum
+   ```
+
+4. Switch to the repo directory, import the package dependencies, then recompile those that were
+   compiled against a newer Node.js version:
+
+   ```shell
+   $ cd  kratum
+   $ npm i
+   $ npm rb
+   ```
+
+5. Edit the [server config file](config/default.json) by replacing `[Insert node identifier here]`
+   with a unique ID to log for each of your server instances and `[Insert wallet address here]` with
+   the Kadena key that you want to assign block rewards to.
+
+6. _TODO: Document Supabase config._
+
+7. Anytime after your Chainweb node has synced with the rest of the network (which you can check by
+   matching the block height of your node at
+   [https://[domain]:1789/chainweb/0.0/mainnet01/cut](https://[domain]:1789/chainweb/0.0/mainnet01/cut)
+   against that of the [Kadena block explorer](https://explorer.chainweb.com/mainnet)), run the
+   server:
+
+   ```shell
+   $ npm start
+   ```
 
 ## Testing
 
