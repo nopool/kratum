@@ -45,9 +45,7 @@ LTS, follow the steps below.
    ```shell
    $ sudo apt update
    $ sudo apt upgrade -y
-   $ sudo apt install -y redis-server \
-                         nodejs       \
-                         npm
+   $ sudo apt install -y nodejs npm
    ```
 
 2. Go to your working directory of choice.
