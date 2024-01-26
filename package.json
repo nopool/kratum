@@ -1,0 +1,54 @@
+{
+  "name": "kratum",
+  "version": "1.0.0",
+  "description": "A Kadena-compatible Stratum server for pooled cryptomining.",
+  "keywords": [
+    "kadena",
+    "stratum",
+    "server",
+    "pooled",
+    "cryptomining"
+  ],
+  "author": "Brian Kennish <brian@joinmassive.com>",
+  "license": "GPL-3.0",
+  "main": "init.js",
+  "scripts": {
+    "start": "pm2 start init.js --name stratum -l stratum.log",
+    "stop": "pm2 stop stratum",
+    "restart": "npm stop && npm start",
+    "test": "echo \"Error: No test specified\" && exit 1"
+  },
+  "dependencies": {
+    "async": "^3.2.5",
+    "base58-native": "^0.1.4",
+    "bignum": "^0.13.1",
+    "blake2": "^5.0.0",
+    "body-parser": "^1.20.2",
+    "chalk": "^5.3.0",
+    "colors": "^1.4.0",
+    "compression": "^1.7.4",
+    "config": "^3.3.10",
+    "dateformat": "^5.0.3",
+    "dot": "^1.1.3",
+    "express": "^4.18.2",
+    "extend": "^3.0.2",
+    "multi-hashing": "^1.0.2",
+    "node-json-minify": "^3.0.0",
+    "node-watch": "^0.7.4",
+    "nonce": "^1.0.4",
+    "pino": "^8.17.2",
+    "pino-pretty": "^10.3.1",
+    "pm2": "^5.3.1",
+    "posix": "^4.2.0",
+    "redis": "^4.6.12",
+    "req-fast": "^0.2.21",
+    "request": "^2.88.2"
+  },
+  "engines": {
+    "node": "^12.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nopool/kratum"
+  }
+}
