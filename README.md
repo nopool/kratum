@@ -39,8 +39,8 @@ Kratum is developed using Node.js 12.x due to Ubuntu LTS availability. The serve
 [hosted Supabase project](https://supabase.com/dashboard/projects), which you can configure by
 referring to their documentation, and a
 [working Kadena Chainweb node](https://github.com/nopool/chainweb-node), the configuration of which
-is described in that repository. To import the other dependencies and run the server on Ubuntu 22.04
-LTS, follow the steps below.
+is documented in that repository. To import the other dependencies and run the server on Ubuntu
+22.04 LTS, follow the steps below.
 
 1. Import the system dependencies:
 

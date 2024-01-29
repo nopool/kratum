@@ -1,4 +1,4 @@
 node_modules
 config/default.json
-testing/noncerpro.bat
+noncerpro.bat
 *.log
