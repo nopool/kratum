@@ -36,8 +36,8 @@ adequate hardware help reproduce and resolve any new issues.
 ## Deployment and development
 
 Kratum is developed using Node.js 12.x due to Ubuntu LTS availability. The server requires a
-[hosted Supabase project](https://supabase.com/dashboard/projects), which you can refer to their
-documentation to configure, and a
+[hosted Supabase project](https://supabase.com/dashboard/projects), which you can configure by
+referring to their documentation, and a
 [working Kadena Chainweb node](https://github.com/nopool/chainweb-node), the configuration of which
 is described in that repository. To import the other dependencies and run the server on Ubuntu 22.04
 LTS, follow the steps below.
@@ -66,9 +66,10 @@ LTS, follow the steps below.
    $ npm rb
    ```
 
-5. Edit the [server config file](config/default.json) by replacing `[Insert node identifier here]`
-   with a unique ID to log for each of your server instances, `[Insert project URL here]` and
-   `[Insert API key here]` with your Supabase credentials, and `[Insert wallet address here]` with the
+5. Rename the [server config template](config/default.example.json) `default.json` then edit the
+   file by replacing `[Insert node identifier here]` with a unique ID to log for your server
+   instance (you can run multiple instances), `[Insert project URL here]` and
+   `[Insert API key here]` with your Supabase settings, and `[Insert wallet address here]` with the
    Kadena key that you want to assign block rewards to.
 
 6. Anytime after your Chainweb node has synced with the rest of the network (which you can check by
@@ -84,7 +85,7 @@ LTS, follow the steps below.
 
 [NoncerPro](https://github.com/NoncerPro/Kadena/releases/tag/2.2.0) seems to be the only non-ASIC
 Kadena mining software that’s publicly available and still functional. That miner can be used to
-test Kratum with the [provided batch template](testing/noncerpro.bat).
+test Kratum with the [provided batch template](testing/noncerpro.example.bat).
 
 ## License
 
