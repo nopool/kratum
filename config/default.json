@@ -15,6 +15,10 @@
                   "host": "::",
                   "port": 6379
                 },
+    "supabase": {
+                  "url": "[Insert project URL here]",
+                  "key": "[Insert API key here]"
+                },
         "pool": {
                         "cutPollingInterval": 100,
                        "workPollingInterval": 25,

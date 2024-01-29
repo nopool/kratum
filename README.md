@@ -35,7 +35,9 @@ adequate hardware help reproduce and resolve any new issues.
 
 ## Deployment and development
 
-Kratum is developed using Node.js 12.x (due to Ubuntu LTS availability) and requires a
+Kratum is developed using Node.js 12.x due to Ubuntu LTS availability. The server requires a
+[hosted Supabase project](https://supabase.com/dashboard/projects), which you can refer to their
+documentation to configure, and a
 [working Kadena Chainweb node](https://github.com/nopool/chainweb-node), the configuration of which
 is described in that repository. To import the other dependencies and run the server on Ubuntu 22.04
 LTS, follow the steps below.
@@ -65,12 +67,11 @@ LTS, follow the steps below.
    ```
 
 5. Edit the [server config file](config/default.json) by replacing `[Insert node identifier here]`
-   with a unique ID to log for each of your server instances and `[Insert wallet address here]` with
-   the Kadena key that you want to assign block rewards to.
+   with a unique ID to log for each of your server instances, `[Insert project URL here]` and
+   `[Insert API key here]` with your Supabase credentials, and `[Insert wallet address here]` with the
+   Kadena key that you want to assign block rewards to.
 
-6. _TODO: Document Supabase config._
-
-7. Anytime after your Chainweb node has synced with the rest of the network (which you can check by
+6. Anytime after your Chainweb node has synced with the rest of the network (which you can check by
    matching the block height of your node at
    [https://[domain]:1789/chainweb/0.0/mainnet01/cut](https://[domain]:1789/chainweb/0.0/mainnet01/cut)
    with that of the [Kadena block explorer](https://explorer.chainweb.com/mainnet)), run the server:

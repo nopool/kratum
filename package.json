@@ -19,6 +19,7 @@
     "test": "echo \"Error: No test specified\" && exit 1"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.39.3",
     "async": "^3.2.5",
     "base58-native": "^0.1.4",
     "blake2": "^5.0.0",
