@@ -1,15 +1,8 @@
 {
       "nodeId": "[Insert node identifier here]",
-     "logging": {
-                           "level": "info",
-                  "shouldColorize": true
-                },
   "clustering": {
                   "forkCount": "auto",
                   "isEnabled": false
-                },
-         "cli": {
-                  "port": 0
                 },
        "redis": {
                   "host": "::",
@@ -69,5 +62,12 @@
                                                       }
                                             }
                                         }
+                },
+         "cli": {
+                  "port": 0
+                },
+     "logging": {
+                           "level": "info",
+                  "shouldColorize": true
                 }
 }
