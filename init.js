@@ -1,16 +1,16 @@
 const os               = require('os');
 const cluster          = require('cluster');
 const posix            = require('posix');
-const config           = require('config');
+const appwrite         = require('appwrite');
 const pino             = require('pino');
 const prettifier       = require('pino-pretty');
 const chalk            = require('chalk');
-const createClient     = require('@supabase/supabase-js');
+const config           = require('config');
 const algoProperties   = require('./lib/algoproperties');
 const poolWorker       = require('./lib/poolworker');
 const cliListener      = require('./lib/clilistener');
-const supabase         = config.get('supabase');
-const logging          = config.get('logging');
+const appwriteConfig   = config.get('appwrite');
+const loggingConfig    = config.get('logging');
 const coinConfigs      = parseCoinConfigs();
 const poolWorkers      = {};
 const parseCoinConfigs = () => {
@@ -222,7 +222,7 @@ let   minerCount       = 0;
 let   workerCount      = 0;
       JSON.minify      = JSON.minify || require('node-json-minify');
       global.logger    = pino({
-                                 level: logging.level,
+                                 level: loggingConfig.level,
                                 redact: {
                                            paths: [ 'pid', 'hostname' ],
                                           remove: true
@@ -232,7 +232,7 @@ let   workerCount      = 0;
                                           levelFirst: true
                                         },
                             prettifier: prettifier,
-                              colorize: logging.shouldColorize && chalk.supportsColor
+                              colorize: loggingConfig.shouldColorize && chalk.supportsColor
                          });
 
 if (process.argv.length != 2) {
@@ -242,9 +242,14 @@ if (process.argv.length != 2) {
 }
 
 try {
-  global.supabase = createClient(supabase.url, supabase.key);
+  global.appwrite = new appwrite.Client();
+
+  global.appwrite
+        .setEndpoint(appwriteConfig.endpoint)
+        .setProject(appwriteConfig.id)
+        .setKey(appwriteConfig.key);
 } catch (error) {
-  logger.error(`Error connecting to Supabase: ${ JSON.stringify(error) }`);
+  logger.error(`Error connecting to Appwrite: ${ JSON.stringify(error) }`);
 
   process.exit(1);
 }

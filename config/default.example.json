@@ -8,9 +8,10 @@
                   "host": "::",
                   "port": 6379
                 },
-    "supabase": {
-                  "url": "[Insert project URL here]",
-                  "key": "[Insert API key here]"
+    "appwrite": {
+                  "endpoint": "https://cloud.appwrite.io/v1",
+                        "id": "[Insert project ID here]",
+                       "key": "[Insert API key here]"
                 },
         "pool": {
                         "cutPollingInterval": 100,

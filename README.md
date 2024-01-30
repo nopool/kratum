@@ -20,10 +20,10 @@ bears some maintenance cost too. In particular, the projects’ event-driven con
 like spaghetti code.
 
 A notable structural departure is the migration of NOMP’s MySQL database to the
-[Supabase platform](https://github.com/supabase) for compatibility with
+[Appwrite platform](https://github.com/appwrite) for compatibility with
 [Massive’s interface](https://nopool.com/). [MPOS compatibility](https://github.com/MPOS/php-mpos)
 has been dropped in the process and
-[Supabase self-hosting](https://supabase.com/docs/guides/self-hosting) opted against, so future
+[Appwrite self-hosting](https://appwrite.io/docs/advanced/self-hosting) opted against, so future
 contributors might consider implementing either feature or both.
 
 ## Caveats
@@ -35,12 +35,12 @@ adequate hardware help reproduce and resolve any new issues.
 
 ## Deployment and development
 
-Kratum is developed using Node.js 12.x due to Ubuntu LTS availability. The server requires a
-[hosted Supabase project](https://supabase.com/dashboard/projects), which you can configure by
-referring to their documentation, and a
-[working Kadena Chainweb node](https://github.com/nopool/chainweb-node), the configuration of which
-is documented in that repository. To import the other dependencies and run the server on Ubuntu
-22.04 LTS, follow the steps below.
+Kratum is developed using Node.js 12.x due to Ubuntu LTS availability. The server requires a hosted
+Appwrite project, which you can configure by referring to
+[their documentation](https://appwrite.io/docs/quick-starts/node), and a working Kadena Chainweb
+node, the configuration of which is documented in
+[that repository](https://github.com/nopool/chainweb-node). To import the other dependencies and
+run the server on Ubuntu 22.04 LTS, follow the steps below.
 
 1. Import the system dependencies:
 
@@ -68,8 +68,8 @@ is documented in that repository. To import the other dependencies and run the s
 
 5. Rename the [server config template](config/default.example.json) `default.json` then edit the
    file by replacing `[Insert node identifier here]` with a unique ID to log for your server
-   instance (you can run multiple instances), `[Insert project URL here]` and
-   `[Insert API key here]` with your Supabase settings, and `[Insert wallet address here]` with the
+   instance (you can run multiple instances), `[Insert project ID here]` and
+   `[Insert API key here]` with your Appwrite settings, and `[Insert wallet address here]` with the
    Kadena key that you want to assign block rewards to.
 
 6. Anytime after your Chainweb node has synced with the rest of the network (which you can check by
