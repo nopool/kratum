@@ -24,7 +24,7 @@ const parseCoinConfigs = () => {
                              const algo      = leftCoin.algo;
                              const leftPorts = Object.keys(leftCoin.ports);
 
-                             // Make sure no coin uses any of same ports as another
+                             // Making sure no coin uses any of same ports as another
                              for (
                                var rightIndex = leftIndex + 1; rightIndex < count; rightIndex++
                              ) {
@@ -156,7 +156,7 @@ const spawnPoolWorker  = (forkId) => {
                                case 'axm:action':
                                case 'axm:reply':
                                case 'application:dependencies':
-                                 // Ignore PM2 probes
+                                 // Ignoring PM2 probes
                                  break;
 
                                default:
@@ -249,16 +249,16 @@ try {
   process.exit(1);
 }
 
-// Try to give process ability to handle 100K concurrent connections
+// Trying to give process ability to handle 100K concurrent connections
 try {
   posix.setrlimit('nofile', { soft: 100000, hard: 100000 });
 } catch (error) {
   if (cluster.isPrimary) logger.warn('Pool must be run as root to increase resource limits');
 } finally {
-  // Find out which user sudoed through environment variable
+  // Finding which user sudoed through environment variable
   const uid = parseInt(process.env.SUDO_UID);
 
-  // Set server’s UID to that user’s
+  // Setting process’s UID to that user’s
   if (uid) {
     process.setuid(uid);
     logger.info(
@@ -268,8 +268,10 @@ try {
   }
 }
 
-// Broadcast from primary process to pool workers
+// Broadcasting from primary process to pool workers
 if (cluster.isPrimary) {
+  spawnPoolWorkers();
+  startCliListener();
   // TODO: Move interval to config
   setInterval(() => {
     if (poolWorkers) {
@@ -280,19 +282,13 @@ if (cluster.isPrimary) {
       logger.info(`Running ${ Object.keys(poolWorkers).length } pool workers(s)`);
     }
   }, 15000);
-}
-
-// Listen for pool workers from primary process
-if (cluster.isWorker) {
-  if (process.env.workerType == 'pool') { // Currently in forked pool worker
-    new poolWorker(logger);
-  }
-} else {
-  spawnPoolWorkers();
-  startCliListener();
   setInterval(() => {
     if (poolWorkers) {
       for (var forkId in poolWorkers) poolWorkers[ forkId ].send({ type: 'metricsSample' });
     }
   }, config.get('pool').metricsSampleInterval * 1000);
+} else { // Listening for primary from worker
+  if (process.env.workerType == 'pool') { // In forked worker
+    new poolWorker(logger);
+  }
 }
